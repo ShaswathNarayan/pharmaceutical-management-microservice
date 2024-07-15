@@ -125,7 +125,7 @@ public class MedicineInfoController {
      * @param searchTerm the term to search for.
      * @return a ResponseEntity containing the status and the search results.
      */
-    @GetMapping("/searchItem")
+    @GetMapping("/searchTerm")
     public ResponseEntity<Map<String, Object>> searchMedicines(@RequestParam(required = false) String searchTerm) {
         Map<String, Object> response = medicineInfoService.searchMedicines(searchTerm);
         if ("success".equals(response.get("status"))) {
